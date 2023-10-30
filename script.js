@@ -1,14 +1,20 @@
-document.getElementById("play").addEventListener("click", function() {
-    // Send a request to play music on your PC
-    fetch("/play", { method: "POST" });
-});
+function playMusic() {
+    fetch('/play', { method: 'POST' })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+}
 
-document.getElementById("pause").addEventListener("click", function() {
-    // Send a request to pause music on your PC
-    fetch("/pause", { method: "POST" });
-});
+function pauseMusic() {
+    fetch('/pause', { method: 'POST' })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+}
 
-document.getElementById("skip").addEventListener("click", function() {
-    // Send a request to skip music on your PC
-    fetch("/skip", { method: "POST" });
-});
+function skipMusic() {
+    fetch('/skip', { method: 'POST' })
+        .then(response => response.text())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+}
